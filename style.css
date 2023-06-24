@@ -1,0 +1,141 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root{
+  /* ff - font-family */
+  --ff-heading: 'Staatliches', cursive;
+  --ff-main: 'Palanquin', sans-serif;
+  /* bg - background */
+  --bg-heading: hsl(218, 17%, 62%);
+  --bg-main: hsl(233, 100%, 97%);
+  --bg-title: hsl(275, 18%, 79%);
+  /* fc - font-color */
+  --fc-primary: hsl(0, 0%, 100%);
+  --fc-secondary: hsl(274, 84%, 12%);
+  /* fs - font-size */
+  font-size: 62.5%;
+  --fs-heading: 4rem;
+  --fs-main: 2rem;
+}
+
+body{
+  font-family: var(--ff-main);
+  color: var(--fc-primary);
+  font-size: var(--fs-main);
+}
+
+.page{
+  max-width: 38.4rem; /* adicionar clamp */
+  margin: 0 auto;
+  background-color: var(--bg-main);
+}
+
+.logo-wrapper{
+  background: var(--bg-heading);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header img{
+  margin: 3.2rem 0;
+  max-width: 100%;
+}
+
+header h1{
+  background: var(--bg-title);
+  font-family: var(--ff-heading);
+  font-size: var(--fs-heading);
+  color: var(--fc-heading);
+  padding: 0.8rem 0;
+  margin-bottom: 2.9rem;
+  line-height: 3.4rem;
+  letter-spacing: 0.05em;
+  text-shadow: 0 0.2rem 0.2rem rgba(0, 0, 0, 0.25);
+  text-align: center;
+  width: 100%;
+}
+
+header p{
+  color: var(--fc-secondary);
+  font-family: 'Palanquin';
+  font-size: 2rem;
+  padding: 1.4rem 4rem 6.3rem;
+  line-height: 1.5rem;
+  text-align: center;
+}
+
+main{
+  padding: 1.4rem 3.2rem;
+}
+
+.card-wrapper{
+  display: grid;
+  gap: 3.2rem;
+  grid-auto-rows: 25rem 45rem;
+  justify-content: center;
+}
+
+.card{
+  position: relative;
+}
+
+.card img{
+  height: 100%;
+  object-fit: cover;
+  width: 32rem;
+  border-radius: 2rem;
+  animation-name: down-top;
+  animation-fill-mode: forwards;
+  animation-duration: 1000ms;
+}
+
+.card h2{
+  position: absolute;
+  right: 1.6rem;
+  top: 0;
+  font-family: var(--ff-heading);
+  font-size: var(--fs-main);
+  background: hsla(312, 91%, 96%, 1);
+  color: hsla(232, 17%, 35%, 1);
+  padding: 0 2.4rem;
+  border-radius: 2rem;
+  line-height: 3.4rem;
+  height: 3.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  animation-name: top-down;
+  animation-duration: 1000ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top-down{
+  0%{
+    opacity: 0;
+    transform: translateY(-15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes down-top{
+  0%{
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  100%{
+    opacity: 1;
+    transform: translateY(-15px);
+  }
+}
+
+@media(min-width: 385px){
+
+}
