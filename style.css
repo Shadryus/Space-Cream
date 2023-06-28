@@ -28,7 +28,6 @@ body{
 }
 
 .page{
-  max-width: 38.4rem; /* adicionar clamp */
   margin: 0 auto;
   background-color: var(--bg-main);
 }
@@ -136,6 +135,26 @@ main{
   }
 }
 
-@media(min-width: 385px){
+@media (width > 38.4rem){
+  .page{
+    display: flex;
+  }
 
+  header{
+    min-width: 377px;
+    background: var(--bg-heading);
+  }
+
+  header p{
+    color: var(--fc-heading);
+  }
+
+  main{
+    padding: 0;
+  }
+  
+  .card-wrapper{
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 64px 98px;
+  }
 }
