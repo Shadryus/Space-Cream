@@ -25,11 +25,12 @@ body{
   font-family: var(--ff-main);
   color: var(--fc-primary);
   font-size: var(--fs-main);
+  background-color: var(--bg-main);
+  
 }
 
 .page{
-  margin: 0 auto;
-  background-color: var(--bg-main);
+  margin: 0 auto; 
 }
 
 .logo-wrapper{
@@ -111,6 +112,22 @@ main{
   animation-fill-mode: forwards;
 }
 
+footer{
+  color: #4A4E69;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 1.4rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 28px;
+  margin: 50px;
+}
+
+footer a{
+  text-decoration: none;
+  color: #4A4E69;
+}
+
 @keyframes top-down{
   0%{
     opacity: 0;
@@ -154,7 +171,36 @@ main{
   }
   
   .card-wrapper{
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 64px 98px;
+    grid-auto-rows: 25rem;
+    grid-template-areas: 
+    "A B C"
+    "D B E"
+    "D F E";
+    padding: 64px 98px 0;
   }
+
+  .card-wrapper div:nth-child(1){
+    grid-area: A;
+  }
+  .card-wrapper div:nth-child(2){
+    grid-area: B;
+  }
+  .card-wrapper div:nth-child(3){
+    grid-area: C;
+  }
+  .card-wrapper div:nth-child(4){
+    grid-area: D;
+  }
+  .card-wrapper div:nth-child(5){
+    grid-area: E;
+  }
+  .card-wrapper div:nth-child(6){
+    grid-area: F;
+  }
+
+  .card img{
+    width: 35rem;
+  }
+  
+
 }
