@@ -19,6 +19,7 @@
   font-size: 62.5%;
   --fs-heading: 4rem;
   --fs-main: 2rem;
+  --img-size: clamp(13.7rem, 1.5rem + 3vw, 21.44rem)
 }
 
 body{
@@ -26,11 +27,11 @@ body{
   color: var(--fc-primary);
   font-size: var(--fs-main);
   background-color: var(--bg-main);
-  height: 100vh;
 }
 
 .page{
-  margin: 0 auto; 
+  margin: 0 auto;
+  height: 100vh;
 }
 
 .logo-wrapper{
@@ -40,9 +41,13 @@ body{
   align-items: center;
 }
 
+header{
+  width: 377px;
+}
+
 header img{
-  margin: 3.2rem 0;
-  max-width: 100%;
+  padding: 3.2rem 0;
+  width: var(--img-size);
 }
 
 header h1{
@@ -86,7 +91,7 @@ main{
 .card img{
   height: 100%;
   object-fit: cover;
-  width: 32rem;
+  width: 100%;
   border-radius: 2rem;
   animation-name: down-top;
   animation-fill-mode: forwards;
@@ -152,14 +157,15 @@ footer a{
   }
 }
 
-@media (width > 38.4rem){
+@media (width > 384px){
   .page{
     display: flex;
+    height: 100%;
   }
 
   header{
-    min-width: 377px;
     background: var(--bg-heading);
+    min-width: 377px;
   }
 
   header p{
@@ -198,8 +204,8 @@ footer a{
     grid-area: F;
   }
 
-  .card img{
-    max-width: 35rem;
+  .card h2{
+    display: none;
   }
 
   footer{
